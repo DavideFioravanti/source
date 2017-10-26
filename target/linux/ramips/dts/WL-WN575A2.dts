@@ -40,22 +40,22 @@
 		compatible = "gpio-leds";
 
 		wifi-high {
-			label = "wl-wn575a3:green:wifi-high";
+			label = "wl-wn575a2:green:wifi-high";
 			gpios = <&gpio1 5 GPIO_ACTIVE_LOW>;
 		};
 
 		wifi-med {
-			label = "wl-wn575a3:green:wifi-med";
+			label = "wl-wn575a2:green:wifi-med";
 			gpios = <&gpio0 11 GPIO_ACTIVE_LOW>;
 		};
 
 		wifi-low {
-			label = "wl-wn575a3:green:wifi-low";
+			label = "wl-wn575a2:green:wifi-low";
 			gpios = <&gpio1 12 GPIO_ACTIVE_LOW>;
 		};
 
 		wps {
-			label = "wl-wn575a3:green:wps";
+			label = "wl-wn575a2:green:wps";
 			gpios = <&gpio0 4 GPIO_ACTIVE_LOW>;
 		};
 	};
