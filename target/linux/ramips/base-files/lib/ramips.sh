@@ -598,6 +598,9 @@ ramips_board_detect() {
 	*"WL-351 v1 002")
 		name="wl-351"
 		;;
+	*"WL-WN575A2")
+                name="wl-wn575a2"
+                ;;
 	*"WL-WN575A3")
 		name="wl-wn575a3"
 		;;

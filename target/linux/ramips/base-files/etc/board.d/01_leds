@@ -397,6 +397,7 @@ whr-600d)
 	ucidef_set_led_default "power" "power" "$board:green:power" "1"
 	ucidef_set_led_default "router" "router" "$board:green:router" "1"
 	;;
+wl-wn575a2|\
 wl-wn575a3)
 	ucidef_set_rssimon "wlan1" "200000" "1"
 	ucidef_set_led_rssi "wifi-low" "wifi-low" "$board:green:wifi-low" "wlan1" "1" "49"

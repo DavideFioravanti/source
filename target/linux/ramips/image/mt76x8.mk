@@ -135,6 +135,14 @@ define Device/wcr-1166ds
 endef
 TARGET_DEVICES += wcr-1166ds
 
+define Device/wl-wn575a2
+  DTS := WL-WN575A2
+  IMAGE_SIZE := $(ralink_default_fw_size_8M)
+  DEVICE_TITLE := Wavlink WL-WN575A2
+  DEVICE:PACKAGES := kmod-mt7610e
+endef
+TARGET_DEVICES += wl-wn575a2
+
 define Device/wl-wn575a3
   DTS := WL-WN575A3
   IMAGE_SIZE := $(ralink_default_fw_size_8M)
