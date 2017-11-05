@@ -6,11 +6,11 @@ include $(INCLUDE_DIR)/image.mk
 UBIFS_OPTS = -m 2048 -e 124KiB -c 4096 -U -F
 
 define Image/Prepare
-	$(CP) $(LINUX_DIR)/vmlinux $(KDIR)/$(IMG_PREFIX)-vmlinux.elf
+	$(CP) $(LINUX_DIR)/vmlinux $(KDIR)/vmlinux-unstripped.elf
 endef
 
 define Image/BuildKernel
-	$(CP) $(KDIR)/$(IMG_PREFIX)-vmlinux.elf $(BIN_DIR)
+	$(CP) $(KDIR)/vmlinux-unstripped.elf $(BIN_DIR)/$(IMG_PREFIX)-vmlinux.elf
 endef
 
 define Image/Build/squashfs
@@ -230,7 +230,7 @@ define Device/NBG6817
 	BLOCKSIZE := 64k
 	BOARD_NAME := nbg6817
 	DEVICE_TITLE := ZyXEL NBG6817
-	DEVICE_PACKAGES := ath10k-firmware-qca9984 e2fsprogs losetup
+	DEVICE_PACKAGES := ath10k-firmware-qca9984 e2fsprogs kmod-fs-ext4 losetup
 	$(call Device/ZyXELImage)
 endef
 
