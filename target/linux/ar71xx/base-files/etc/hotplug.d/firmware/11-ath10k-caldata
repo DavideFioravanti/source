@@ -125,6 +125,9 @@ case "$FIRMWARE" in
 	rb-911g-5hpacd)
 		ath10kcal_from_file "/sys/firmware/routerboot/ext_wlan_data" 20480 2116
 		;;
+	wlr8100)
+		ath10kcal_extract "art" 24576 2116
+		;;
 	esac
 	;;
 *)
